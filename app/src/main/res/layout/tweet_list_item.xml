@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvTweets"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_person_24" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imgPerson"
+                app:layout_constraintTop_toTopOf="@+id/imgPerson"
+                tools:text="name" />
+
+            <TextView
+                android:id="@+id/tvHandle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tvName"
+                app:layout_constraintTop_toTopOf="@+id/tvName"
+                tools:text="handle" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/tvHandle"
+                app:layout_constraintTop_toTopOf="@+id/tvHandle"
+                tools:text="time" />
+
+            <TextView
+                android:id="@+id/tvTweet"
+                android:layout_width="278dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imgPerson"
+                app:layout_constraintTop_toBottomOf="@+id/tvName"
+                tools:text="I passed my 2 previous interviews and now have 2 final interviews this coming week! Let’s go!! :)" />
+
+            <ImageView
+                android:id="@+id/imgMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgPerson"
+                app:layout_constraintTop_toBottomOf="@+id/tvTweet"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_round_textsms_24" />
+
+            <ImageView
+                android:id="@+id/imgRetweet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                app:layout_constraintStart_toEndOf="@+id/imgMessage"
+                app:layout_constraintTop_toTopOf="@+id/imgMessage"
+                app:srcCompat="@drawable/ic_baseline_repeat_24" />
+
+            <ImageView
+                android:id="@+id/imgLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                app:layout_constraintStart_toEndOf="@+id/imgRetweet"
+                app:layout_constraintTop_toTopOf="@+id/imgRetweet"
+                app:srcCompat="@drawable/ic_baseline_favorite_24" />
+
+            <ImageView
+                android:id="@+id/imgUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                app:layout_constraintEnd_toEndOf="@+id/tvTweet"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/imgLikes"
+                app:layout_constraintTop_toTopOf="@+id/imgLikes"
+                app:srcCompat="@drawable/ic_baseline_file_upload_24" />
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/imgMessage"
+                app:layout_constraintStart_toEndOf="@+id/imgMessage"
+                app:layout_constraintTop_toTopOf="@+id/imgMessage"
+                tools:text="1" />
+
+            <TextView
+                android:id="@+id/tvTweetCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/imgRetweet"
+                app:layout_constraintStart_toEndOf="@+id/imgRetweet"
+                app:layout_constraintTop_toTopOf="@+id/imgRetweet"
+                tools:text="123" />
+
+            <TextView
+                android:id="@+id/tvLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/imgLikes"
+                app:layout_constraintStart_toEndOf="@+id/imgLikes"
+                app:layout_constraintTop_toTopOf="@+id/imgLikes"
+                tools:text="24" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
